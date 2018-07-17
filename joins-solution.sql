@@ -31,6 +31,6 @@ SELECT count(*) AS "customers_total" FROM "customers";
 SELECT count(*) AS "products_total" FROM "products";
 
 -- 8. What is the total available on-hand quantity of diet pepsi?
-SELECT sum("quantity") AS "pepsi_quatity" FROM "line_items"
+SELECT sum("quantity") AS "pepsi_quantity" FROM "line_items"
 LEFT JOIN "products" ON "line_items"."product_id" = "products"."id"
 WHERE "products"."description" = 'diet pepsi';
